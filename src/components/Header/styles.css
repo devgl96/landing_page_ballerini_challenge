@@ -1,0 +1,83 @@
+.container {
+  width: 75.37rem;
+  height: 6.5rem;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+
+  /* gap: 5rem; */
+
+  margin: 1.2rem auto 0;
+
+  /* padding: 0 5rem; */
+}
+
+.container .logo{
+  margin-left: 22.31rem;
+  margin-right: 14.18rem;
+
+  width: 223.93px;
+  height: 41.6px;
+}
+
+.container .socialMedias {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.container .searchAddSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  gap: 1.2rem;
+}
+
+.container .searchAddSection .inputSearch input {
+  width: 17.7rem;
+  height: 2.81rem;
+
+  background: var(--white);
+
+  border-radius: 10px;
+
+  margin-top: 4rem;
+  padding-top: 0.3rem;
+  padding-left: 2.8rem;
+
+  color: var(--gray-500);
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.container .searchAddSection .inputSearch img{
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+
+  background: var(--white);
+
+  top: 4.5rem;
+  margin-left: 0.7rem;
+}
+
+.container .searchAddSection button {
+  width: 12.5rem;
+  height: 2.5rem;
+
+  background: var(--green);
+  color: var(--white);
+
+  border: none;
+  border-radius: 55px;
+
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+}

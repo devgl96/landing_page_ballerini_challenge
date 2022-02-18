@@ -1,15 +1,18 @@
 :root {
   --black: #1D1D1D;
   --white: #FFFFFF;
+  --white-500: #F9F9F9;
   --green: #27AE60;
   --gray: #A9A9A9;
+  --gray-500: #999999;
   --yellow: #DBB801;
   --red: #F42626;
-  --white-500: #F9F9F9;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* background: var(--black); */
 }
