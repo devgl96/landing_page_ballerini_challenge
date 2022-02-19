@@ -29,11 +29,13 @@
 }
 
 .containerMain .sectionDev {
-  width: 65.75rem;
+  width: 69rem;
   height: 30.83rem;
 
   display: flex;
   flex-direction: row;
 
   gap: 6.25rem; 
+
+  overflow: hidden;
 }
