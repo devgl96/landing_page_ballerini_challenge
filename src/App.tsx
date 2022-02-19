@@ -1,26 +1,22 @@
 import React from 'react';
 import './App.css';
-import { Header } from "./components/Header";
+
+import { Routes, Route} from "react-router-dom";
+
+import { Landing } from './pages/Landing';
+import { TableDevs } from './pages/TableDevs';
+import { DevelopersProvider } from './hooks/useDevelopers';
 
 function App() {
   return (
-    <div className="containerMain">
-      <Header />
-      
-      <div className="contentMain">
-        <div className="left">
-          <h2>O maior banco de devs do Brasil</h2>
-          <p>Nao importa se front ou back end,  fazer networking e muito importante. Faça parte da maior comunidade de desenvolvedores brasileiros.</p>
-          <div className="buttonArea">
-            <button>Entre agora</button>
-            <hr />
-          </div>
-        </div>
-        <div className="right">
-          <img src="/images/Programador_main.svg" alt="Programador feliz sentado no puffy" />
-        </div>
-      </div>
-    </div>
+    <>
+      <DevelopersProvider>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="tabledevs" element={<TableDevs />} />
+        </Routes>
+      </DevelopersProvider>
+    </>
   );
 }
 
