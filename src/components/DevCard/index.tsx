@@ -42,8 +42,8 @@ export function DevCard({ developer }: DevProps) {
           <p>{developer.cargo}</p>
         </div>
         <div className="contactDevCard">
-          <img src="/images/icone_github.svg" alt="Github Icon" />
-          <img src="/images/icone_linkedin.svg" alt="Linkedin Icon" />
+          <a href={developer.github} target="_blank" rel="noreferrer"><img src="/images/icone_github.svg" alt="Github Icon" /></a>
+          <a href={developer.linkedin} target="_blank" rel="noreferrer"><img src="/images/icone_linkedin.svg" alt="Linkedin Icon" /></a>
           <button>Ver mais</button>
         </div>
       </div>
