@@ -28,7 +28,7 @@ export function FormDev({closeModal, typeForm, dev}: FormDevProps) {
 
   function addDeveloper() {
     const newDeveloper: Developer = {
-      id: developers.length + 1,
+      id: developers[developers.length - 1].id + 1,
       name, 
       avatar, 
       cargo, 
