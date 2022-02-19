@@ -20,7 +20,18 @@ export function TableDevs() {
     <div className="containerMain">
       <Header isTableDev={true} />
       <div className="contentMainDev">
-        <img src="/images/botaoLeft.svg" alt="right button to change" />
+        <img 
+          src="/images/botaoLeft.svg" 
+          alt="right button to change" 
+          style={developers.length > 3 ? {
+              cursor: "pointer",
+              filter: "brightness(1)"
+            }:{
+              cursor: "not-allowed",
+              filter: "brightness(0.3)"
+            }
+          }
+        />
         <div className="sectionDev">
           {developers.length > 0 ? 
             <>
@@ -32,7 +43,18 @@ export function TableDevs() {
             <h1>Sem desenvolvedores no momento!</h1>
           }
           </div>
-          <img src="/images/botaoRight.svg" alt="left button to change" />
+          <img 
+            src="/images/botaoRight.svg"
+             alt="left button to change" 
+             style={developers.length > 3 ? {
+                cursor: "pointer",
+                filter: "brightness(1)"
+              }:{
+                cursor: "not-allowed",
+                filter: "brightness(0.3)"
+              }
+            }
+            />
       </div>
     </div>
   );

@@ -9,6 +9,8 @@
   justify-content: center;
 
   gap: 5.125rem;
+
+  margin: 6rem auto; 
 }
 
 .containerMain .contentMainDev h1 {
@@ -18,11 +20,20 @@
   margin: 15rem auto;
 }
 
+.containerMain .contentMainDev img:first-child {
+  left: 5rem;
+}
+
+.containerMain .contentMainDev img:last-child {
+  right: 5rem;
+}
+
 .containerMain .sectionDev {
+  width: 65.75rem;
+  height: 30.83rem;
+
   display: flex;
   flex-direction: row;
 
   gap: 6.25rem; 
-
-  margin-top: 6rem;
 }
