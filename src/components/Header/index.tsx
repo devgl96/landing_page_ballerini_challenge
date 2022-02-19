@@ -1,20 +1,37 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import { Popup } from "../Popup";
+
 import "./styles.css";
 
-export function Header() {
-  const pageTable = false; 
+interface HeaderProps {
+  isTableDev: boolean;
+}
+
+export function Header({isTableDev}: HeaderProps) {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <div className="container">
       <div className="socialMedias">
-        <img src="/images/linkedin.svg" alt="Linkedin icon" />
-        <img src="/images/facebook.svg" alt="Facebook icon" />
-        <img src="/images/discord.svg" alt="Discord icon" />
+        <a href="https://www.linkedin.com/company/comunidadeballerini/" target="_blank" rel="noreferrer"><img src="/images/linkedin.svg" alt="Linkedin icon" /></a>
+        <a href="https://www.facebook.com/rafaella.balleriniribeirogomes" target="_blank" rel="noreferrer"><img src="/images/facebook.svg" alt="Facebook icon" /></a>
+        <a href="https://discord.com/invite/wagxzStdcR" target="_blank" rel="noreferrer"><img src="/images/discord.svg" alt="Discord icon" /></a>
       </div>
       <div className="logo">
-        <img src="/images/Logo.svg" alt="Logo ballerini devs" />
+        <Link to="/"><img src="/images/Logo.svg" alt="Logo ballerini devs" /></Link>
       </div>
       <div className="searchAddSection">
-      {pageTable && 
+      {isTableDev && 
         <>
           <div className="inputSearch">
             <img src="/images/feather_search.svg" alt="icon feather search" />
@@ -23,10 +40,12 @@ export function Header() {
               placeholder="Buscar"
             />
           </div>
-          <button>Adicionar Desenvolvedor</button>
+          <button onClick={openModal}>Adicionar Desenvolvedor</button>
         </>
       }
       </div>
+
+      <Popup modalIsOpen={modalIsOpen} onCloseModal={closeModal} typeForm="POST" />
     </div>
   );
 }
