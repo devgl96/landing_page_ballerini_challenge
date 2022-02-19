@@ -1,0 +1,139 @@
+.containerDevCard {
+  width: 300px;
+
+  position: relative;
+}
+
+.containerDevCard .contentDevCard {
+  background: rgba(249, 249, 249, 0.14);
+
+  width: 300px;
+  height: 400px;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.containerDevCard .contentDevCard .imageDevCard img{
+  border-radius: 87.5px;
+
+  width: 175px;
+  height: 175px;
+
+  border: 3px solid var(--green);
+}
+
+.containerDevCard .contentDevCard .lineDevCard {
+  border: none;
+  border-bottom: 2px solid var(--green);
+  width: 125px;
+}
+
+.containerDevCard .contentDevCard .infoDevCard {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+  color: var(--white);
+
+  text-align: center;
+}
+
+.containerDevCard .contentDevCard .infoDevCard h1 {
+  font-size: 1.60rem;
+
+  margin: 0;
+}
+
+.containerDevCard .contentDevCard .infoDevCard p {
+  font-size: 0.9rem;
+}
+
+.containerDevCard .contentDevCard .contactDevCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  gap: 1rem;
+}
+
+.containerDevCard .contentDevCard .contactDevCard img {
+  transition: filter 0.3s;
+  
+  cursor: pointer;
+}
+
+.containerDevCard .contentDevCard .contactDevCard img:hover {
+  filter: brightness(0.7);
+}
+
+
+
+
+.containerDevCard .contentDevCard .contactDevCard button {
+  width: 9.375rem;
+  height: 3.125rem;
+
+  background: var(--green);
+  color: var(--white);
+
+  border: none;
+  border-radius: 55px;
+
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+
+  font-size: 1.25rem;
+
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+
+  transition: filter 0.3s;
+}
+
+.containerDevCard .contentDevCard .contactDevCard button:hover {
+  filter: brightness(0.8);
+}
+
+.containerDevCard .buttonSectionDevCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+}
+
+.containerDevCard .buttonSectionDevCard button:first-child {
+  background: var(--yellow);
+}
+
+.containerDevCard .buttonSectionDevCard button {
+  width: 7.81rem;
+  height: 2.5rem;
+
+  background: var(--red);
+  color: #0E0D0D;
+
+  border: none;
+  border-radius: 55px;
+
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+
+  font-size: 1.25rem;
+
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+
+  transition: filter 0.3s;
+} 
+
+.containerDevCard .buttonSectionDevCard button:hover {
+  filter: brightness(0.8);
+}
