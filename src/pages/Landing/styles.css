@@ -1,0 +1,102 @@
+.containerMain {
+  width: 100%;
+  height: 100%;
+
+  background: var(--black);
+
+  position: absolute;
+}
+
+.containerMain .contentMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../../../public/images/Blobs_baixo.svg");
+  
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  margin: 0;
+}
+
+
+.containerMain .contentMain .left {
+  font-family: "Overpass", sans-serif;
+
+  width: 559px;
+  height: 368px;
+}
+
+.containerMain .contentMain .left h2 {
+  font-weight: 600;
+  font-size: 48px;
+  color: #D2D2D2;
+
+  line-height: 3.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.containerMain .contentMain .left p {
+  color: #A9A9A9;
+  
+  width: 559px;
+  
+  font-weight: 400;
+  font-size: 24px;
+
+  margin-bottom: 4rem;
+}
+
+.containerMain .contentMain .left .buttonArea {
+  width: 15rem;
+}
+
+.containerMain .contentMain .left button {
+  width: 15rem;
+  height: 3.6rem;
+
+  background: var(--green);
+  color: var(--white);
+
+  border: none;
+  border-radius: 55px;
+
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+
+  font-size: 24px;
+
+  margin-bottom: 1rem;
+
+  transition: filter 0.3;
+
+  cursor: pointer;
+}
+
+.containerMain .contentMain .left button:hover {
+  filter: brightness(0.9);
+}
+
+.containerMain .contentMain .left hr {
+  width: 69.5px;
+  
+  border: none;
+  border-bottom: 2px solid var(--green);
+  margin: 0 auto;
+}
+
+.containerMain .contentMain .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.containerMain .contentMain .right img {
+  width: 680px;
+  height: 667px;
+}
