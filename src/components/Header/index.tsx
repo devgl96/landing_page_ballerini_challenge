@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useDevelopers from "../../hooks/useDevelopers";
 
 import { Popup } from "../Popup";
 
@@ -11,6 +12,8 @@ interface HeaderProps {
 
 export function Header({isTableDev}: HeaderProps) {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [searchBar, setSearchBar] = useState("");
+  const { searchDeveloper } = useDevelopers();
 
   function openModal() {
     setIsOpen(true);
@@ -38,6 +41,7 @@ export function Header({isTableDev}: HeaderProps) {
             <input 
               type="text" 
               placeholder="Buscar"
+              onChange={(e) => searchDeveloper(e.target.value)}
             />
           </div>
           <button onClick={openModal}>Adicionar Desenvolvedor</button>

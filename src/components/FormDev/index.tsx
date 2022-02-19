@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useDevelopers from "../../hooks/useDevelopers";
 import "./styles.css";
 

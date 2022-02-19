@@ -5,16 +5,8 @@ import useDevelopers from "../../hooks/useDevelopers";
 
 import "./styles.css";
 
-interface DevProps {
-  name: string;
-  avatar: string;
-  cargo: string;
-  github: string;
-  linkedin: string;
-}
-
 export function TableDevs() {
-  const { developers } = useDevelopers();
+  const { developers, listDevelopers } = useDevelopers();
 
   const [rightMoveCard, setRightMoveCard] = useState(3);
   const [leftMoveCard, setLeftMoveCard] = useState(0);
@@ -61,13 +53,23 @@ export function TableDevs() {
           onClick={leftDevCard}
         />
         <div className="sectionDev">
-          {developers.length > 0 ? 
+          {listDevelopers.length > 0 ? 
+            <>
+              {listDevelopers.map((developer, index) => {
+                // if(developer.id >= leftMoveCard + 1 && developer.id < rightMoveCard + 1) {
+                if(index >= leftMoveCard && index < rightMoveCard) {
+                  return(
+                    <DevCard key={developer.id} developer={developer}/>
+                  );
+                }
+              })}
+            </>
+          :
+          developers.length > 0 ? 
             <>
                 {developers.map((developer, index) => {
                   // if(developer.id >= leftMoveCard + 1 && developer.id < rightMoveCard + 1) {
-                  console.log("Value index: ", index);
                   if(index >= leftMoveCard && index < rightMoveCard) {
-                    console.log("Rendering Developer...");
                     return(
                       <DevCard key={developer.id} developer={developer}/>
                     );

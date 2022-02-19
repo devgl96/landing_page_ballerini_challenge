@@ -1,3 +1,9 @@
+# Faltando
+- Persistir os dados (OK)
+- Criar funcionalidades para os botões (OK)
+- Melhorar inputs dos formulários (OK)
+- Funcionalidade da barra de busca
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

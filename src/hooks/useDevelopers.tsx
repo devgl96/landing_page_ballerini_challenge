@@ -11,6 +11,8 @@ interface Developer {
 
 interface DeveloperContextData {
   developers: Developer[];
+  listDevelopers: Developer[];
+  searchDeveloper: (developerName: string) => void;
   createDeveloper: (developer: Developer) => void;
   updateDeveloper: (developer: Developer) => void;
   deleteDeveloper: (developer: Developer) => void;
@@ -24,6 +26,7 @@ const DeveloperContext = createContext<DeveloperContextData>({} as DeveloperCont
 
 export function DevelopersProvider({children}: DeveloperProviderProps) {
   const [developers, setDevelopers] = useState<Developer[]>([]);
+  const [listDevelopers, setListDevelopers] = useState<Developer[]>([]);
 
   useEffect(() => {
     if(developers) {
@@ -34,6 +37,31 @@ export function DevelopersProvider({children}: DeveloperProviderProps) {
       localStorage.setItem("developersBallerini", JSON.stringify(developers));
     }
   }, []);
+
+
+  function searchDeveloper(developerName: string) {
+    const listDeveloperSearch: Developer[] = developers.filter((developer) => {
+        if(developer.name.toUpperCase().includes(developerName.toUpperCase())) {
+          return {
+            id: developer.id,
+            name: developer.name,
+            avatar: developer.avatar,
+            cargo: developer.cargo,
+            github: developer.github,
+            linkedin: developer.linkedin,
+          };
+        }
+      }
+    );
+
+    // const listDeveloperNow = listDeveloperSearch.filter(developer => developer !== undefined);
+
+    // console.log("ListDeveloper: ", ...listDeveloperNow);
+
+    if(listDeveloperSearch) {
+      setListDevelopers(listDeveloperSearch); 
+    }
+  }
 
   function createDeveloper(developer: Developer) {
     const newDevelopers = [...developers, developer];
@@ -64,9 +92,11 @@ export function DevelopersProvider({children}: DeveloperProviderProps) {
   return(
     <DeveloperContext.Provider value={{
       developers, 
+      listDevelopers,
       createDeveloper, 
       updateDeveloper, 
-      deleteDeveloper
+      deleteDeveloper,
+      searchDeveloper
     }}>
       {children}
     </DeveloperContext.Provider>
