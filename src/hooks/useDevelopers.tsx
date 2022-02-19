@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 interface Developer {
   id: number;
@@ -25,10 +25,22 @@ const DeveloperContext = createContext<DeveloperContextData>({} as DeveloperCont
 export function DevelopersProvider({children}: DeveloperProviderProps) {
   const [developers, setDevelopers] = useState<Developer[]>([]);
 
+  useEffect(() => {
+    if(developers) {
+      let getDevelopersStorage = localStorage.getItem("developersBallerini");
+
+      getDevelopersStorage && setDevelopers(JSON.parse(getDevelopersStorage));
+    } else {
+      localStorage.setItem("developersBallerini", JSON.stringify(developers));
+    }
+  }, []);
+
   function createDeveloper(developer: Developer) {
     const newDevelopers = [...developers, developer];
 
     setDevelopers(newDevelopers);
+
+    localStorage.setItem("developersBallerini", JSON.stringify(newDevelopers));
   }
 
   function updateDeveloper(developer: Developer) {
@@ -37,12 +49,16 @@ export function DevelopersProvider({children}: DeveloperProviderProps) {
     const newDevelopers = [...updateDeveloper, developer];
 
     setDevelopers(newDevelopers);
+
+    localStorage.setItem("developersBallerini", JSON.stringify(newDevelopers));
   }
 
   function deleteDeveloper(developer: Developer) {
     const newDevelopers = developers.filter(dev => dev.id !== developer.id);
 
     setDevelopers(newDevelopers);
+
+    localStorage.setItem("developersBallerini", JSON.stringify(newDevelopers));
   } 
 
   return(
