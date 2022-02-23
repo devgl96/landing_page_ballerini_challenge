@@ -26,18 +26,18 @@ export function Header({isTableDev}: HeaderProps) {
   return (
     <div className="container">
       <div className="socialMedias">
-        <a href="https://www.linkedin.com/company/comunidadeballerini/" target="_blank" rel="noreferrer"><img src="/images/linkedin.svg" alt="Linkedin icon" /></a>
-        <a href="https://www.facebook.com/rafaella.balleriniribeirogomes" target="_blank" rel="noreferrer"><img src="/images/facebook.svg" alt="Facebook icon" /></a>
-        <a href="https://discord.com/invite/wagxzStdcR" target="_blank" rel="noreferrer"><img src="/images/discord.svg" alt="Discord icon" /></a>
+        <a href="https://www.linkedin.com/company/comunidadeballerini/" target="_blank" rel="noreferrer"><img src="images/linkedin.svg" alt="Linkedin icon" /></a>
+        <a href="https://www.facebook.com/rafaella.balleriniribeirogomes" target="_blank" rel="noreferrer"><img src="images/facebook.svg" alt="Facebook icon" /></a>
+        <a href="https://discord.com/invite/wagxzStdcR" target="_blank" rel="noreferrer"><img src="images/discord.svg" alt="Discord icon" /></a>
       </div>
       <div className="logo">
-        <Link to="/"><img src="/images/Logo.svg" alt="Logo ballerini devs" /></Link>
+        <Link to="/"><img src="images/Logo.svg" alt="Logo ballerini devs" /></Link>
       </div>
       <div className="searchAddSection">
       {isTableDev && 
         <>
           <div className="inputSearch">
-            <img src="/images/feather_search.svg" alt="icon feather search" />
+            <img src="images/feather_search.svg" alt="icon feather search" />
             <input 
               type="text" 
               placeholder="Buscar"
