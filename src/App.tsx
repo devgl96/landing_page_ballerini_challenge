@@ -12,8 +12,8 @@ function App() {
     <>
       <DevelopersProvider>
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="tabledevs" element={<TableDevs />} />
+          <Route path="/landing_page_ballerini_challenge" element={<Landing />} />
+          <Route path="/landing_page_ballerini_challenge/tabledevs" element={<TableDevs />} />
         </Routes>
       </DevelopersProvider>
     </>
