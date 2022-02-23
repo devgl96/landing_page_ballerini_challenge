@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/landing_page_ballerini_challenge/static/css/main.96a5cd7c.css",
-    "main.js": "/landing_page_ballerini_challenge/static/js/main.bff9b611.js",
+    "main.js": "/landing_page_ballerini_challenge/static/js/main.6f9caf63.js",
     "static/media/Blobs_baixo.svg": "/landing_page_ballerini_challenge/static/media/Blobs_baixo.83f61eb1a9b5f2350af0.svg",
     "index.html": "/landing_page_ballerini_challenge/index.html",
     "main.96a5cd7c.css.map": "/landing_page_ballerini_challenge/static/css/main.96a5cd7c.css.map",
-    "main.bff9b611.js.map": "/landing_page_ballerini_challenge/static/js/main.bff9b611.js.map"
+    "main.6f9caf63.js.map": "/landing_page_ballerini_challenge/static/js/main.6f9caf63.js.map"
   },
   "entrypoints": [
     "static/css/main.96a5cd7c.css",
-    "static/js/main.bff9b611.js"
+    "static/js/main.6f9caf63.js"
   ]
 }
