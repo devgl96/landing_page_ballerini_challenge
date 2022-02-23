@@ -40,7 +40,7 @@ export function TableDevs() {
       <Header isTableDev={true} />
       <div className="contentMainDev">
         <img 
-          src="/images/botaoLeft.svg" 
+          src="images/botaoLeft.svg" 
           alt="right button to change" 
           style={(developers.length > 3 && leftMoveCard > 0) ? {
               cursor: "pointer",
@@ -81,7 +81,7 @@ export function TableDevs() {
           }
           </div>
           <img 
-            src="/images/botaoRight.svg"
+            src="images/botaoRight.svg"
              alt="left button to change" 
              style={(developers.length > 3 && rightMoveCard < lengthDevelopers) ? {
                 cursor: "pointer",
