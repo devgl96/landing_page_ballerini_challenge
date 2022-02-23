@@ -8,7 +8,7 @@ export function Landing() {
   const navigate = useNavigate();
 
   function nextPage() {
-    navigate("/TableDevs");
+    navigate("/landing_page_ballerini_challenge/tabledevs");
   }
   return (
     <div className="containerMain">
@@ -24,7 +24,7 @@ export function Landing() {
           </div>
         </div>
         <div className="right">
-          <img src="/images/Programador_main.svg" alt="Programador feliz sentado no puffy" />
+          <img src="images/Programador_main.svg" alt="Programador feliz sentado no puffy" />
         </div>
       </div>
     </div>
