@@ -1,5 +1,5 @@
 # Challenge Ballerini Devs Completed
-
+![Design preview for the Challenge Ballerini Devs Completed](./design/landing_page_ballerini_challenge.jpg)
 ## Objetivo
 O objetivo foi desenvolver um website utilizando ReactJS que permitisse adicionar, atualizar, listar e deletar desenvolvedores. 
 
