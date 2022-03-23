@@ -31,7 +31,7 @@ export function Header({isTableDev}: HeaderProps) {
         <a href="https://discord.com/invite/wagxzStdcR" target="_blank" rel="noreferrer"><img src="images/discord.svg" alt="Discord icon" /></a>
       </div>
       <div className="logo">
-        <Link to="/"><img src="images/Logo.svg" alt="Logo ballerini devs" /></Link>
+        <Link to="/landing_page_ballerini_challenge/"><img src="images/Logo.svg" alt="Logo ballerini devs" /></Link>
       </div>
       <div className="searchAddSection">
       {isTableDev && 
